@@ -1,5 +1,6 @@
 = ACIT4420 Assignment II
 == 1.0 Introduction
+
 The `study_reminders` package is a lightweight Python designed to serve as a reminder system for students.
 This report outlines its design architecture, structure, and any implementation challenges met during the project.
 
@@ -51,9 +52,19 @@ loop so the system does not terminate, and the user can keep navigating through 
 
 == 3.0 Challenges
 One of the bigger challenges was managing the python environment through `venv`.
-This was the first time working with `venv` and the goal was not to install any packages globally on this system.
+This was the first time working with `venv`, 
+and the goal was not to install any packages globally on the system.
 
-== 4.0 Environment and tools
+== 4.0 Discussion
+I am personally happy with the resulting package. I feel like, even though most of the implementation
+was already provided, I could still add onto it and make it my own. I was especially happy with the
+interactive menu for testing the modules.
+
+There are still some improvements that could be made. Adding tests, for example,
+could help stop regressions and future-proof the code. Python package structure is also quite confusing,
+and I am certain there are some choices that could have improved the end result.
+
+== 5.0 Environment and tools
 - #strong[Language]: Python
 - #strong[External packages]: `schedule`, `pytz`
 - #strong[Documentation]: Typst

@@ -1,4 +1,8 @@
 # Installation
+Dependencies:
+- `schedule`
+- `pytz` (for making `schedule` timezone-compatible)
+
 Clone this repository and install the package locally using `pip`:
 ```bash
 git clone https://github.com/Noxalas/acit4420_student_reminder_assignment.git
