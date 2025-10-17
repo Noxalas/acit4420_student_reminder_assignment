@@ -34,7 +34,17 @@ def main_menu(student_manager: StudentsManager):
 
 
 def run_tests():
-    pass
+    print("Not implemented.")
+
+
+def print_students(student_manager: StudentsManager) -> None:
+    students = student_manager.get_students()
+
+    for i in range(len(students)):
+        student = students[i]
+        print(
+            f"ID {i} | {student.name} | {student.contact_info} | {student.preferred_time}"
+        )
 
 
 def student_menu(student_manager: StudentsManager):
@@ -53,22 +63,26 @@ def student_menu(student_manager: StudentsManager):
             student_contact_info = input("Student email:")
             student_course = input("Course (e.g. Mathematics):")
             student_preferred_time = input('Preferred time (e.g. "08:00"):')
-            student_manager.add_student(student_name, student_contact_info, student_course, student_preferred_time)
+            student_manager.add_student(
+                student_name,
+                student_contact_info,
+                student_course,
+                student_preferred_time,
+            )
+
         elif choice == "2":
-            students = student_manager.get_students()
+            print_students(student_manager) 
 
-            for i in range(len(students)):
-                student = students[i]
-                print(
-                    f"ID {i} | {student.name} | {student.contact_info} | {student.preferred_time}"
-                )
+            student_id = input("Student ID: ")
 
-            student_name = input("Student name:")
+            try:
+                student = student_manager.remove_student_by_id(int(student_id))
+                print(f"Successfully removed {student.name} from the student list.")
+            except ValueError:
+                print("Wrong value type. Not removing.")
 
-            pass
         elif choice == "3":
-            print(student_manager.get_students_serialized())
-            pass
+            print_students(student_manager)
         elif choice == "4":
             print("Returning to menu...")
             break
@@ -86,9 +100,14 @@ def scheduler_menu(student_manager: StudentsManager):
         choice = input("Select an option (1-3 or CTRL-C to Exit):")
 
         if choice == "1":
-            schedule_reminders(student_manager, generate_reminder, send_reminder, log_reminder)
+            schedule_reminders(
+                student_manager, generate_reminder, send_reminder, log_reminder
+            )
         elif choice == "2":
             trigger(student_manager, generate_reminder, send_reminder, log_reminder)
+        elif choice == "3":
+            print("Returning to menu...")
+            break
         else:
             print("Invalid choice.")
 

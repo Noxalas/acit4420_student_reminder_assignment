@@ -7,7 +7,7 @@ import time
 
 
 def schedule_reminders(students_manager, reminder_generator, reminder_sender, logger):
-    """"""
+    """Runs the scheduler to trigger sending reminders to students at their preferred time."""
     for student in students_manager.get_students():
 
         def job(s=student):

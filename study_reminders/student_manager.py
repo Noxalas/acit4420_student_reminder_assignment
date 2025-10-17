@@ -46,7 +46,7 @@ class StudentsManager:
         self.save_students()
 
 
-    def remove_student(self, name) -> None:
+    def remove_student_by_name(self, name) -> None:
         """Remove a student by name."""
         self.students = [s for s in self.students if s.name != name]
         self.save_students()
@@ -54,7 +54,9 @@ class StudentsManager:
     
     def remove_student_by_id(self, student_id) -> Student:
         """Pops a student off the student list using the provided id and returns it."""
-        return self.students.pop(student_id)
+        student = self.students.pop(student_id)
+        self.save_students()
+        return student
 
 
     def save_students(self) -> None:

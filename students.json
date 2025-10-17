@@ -10,11 +10,5 @@
         "contact_info": "bob@example.com",
         "course": "Physics",
         "preferred_time": "16:00"
-    },
-    {
-        "name": "Amos",
-        "contact_info": "Amos@example.com",
-        "course": "Engineering",
-        "preferred_time": "09:00"
     }
 ]
