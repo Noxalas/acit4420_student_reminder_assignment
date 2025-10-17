@@ -1,4 +1,4 @@
-= ACIT4420 Mandatory Assignment 2 Report
+= ACIT4420 Assignment II
 == 1.0 Introduction
 The `study_reminders` package is a lightweight Python designed to serve as a reminder system for students.
 This report outlines its design architecture, structure, and any implementation challenges met during the project.
