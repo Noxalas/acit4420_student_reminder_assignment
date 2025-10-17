@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Alice",
+        "contact_info": "alice@example.com",
+        "course": "Mathematics",
+        "preferred_time": "23:41"
+    },
+    {
+        "name": "Bob",
+        "contact_info": "bob@example.com",
+        "course": "Physics",
+        "preferred_time": "16:00"
+    },
+    {
+        "name": "Amos",
+        "contact_info": "Amos@example.com",
+        "course": "Engineering",
+        "preferred_time": "09:00"
+    }
+]
