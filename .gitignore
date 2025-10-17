@@ -5,3 +5,20 @@ __pycache__/
 
 # Environment
 venv/
+
+# Project-speific
+reminder_log.txt
+
+# Distribution
+.Python
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
