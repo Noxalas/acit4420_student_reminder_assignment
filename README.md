@@ -19,6 +19,7 @@ MAIN MENU
 3. Run tests
 4. Exit
 ```
+For more information check [the report](assignment_2_report.pdf) or the module documentation.
 
 # Modules
 | Module | Description |
